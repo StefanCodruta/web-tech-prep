@@ -1,6 +1,5 @@
-# ex-tech
-### **use [this gitbook](https://lazeastefan.gitbook.io/cheatsheet/)**
-## cheatsheet
+# Ho to web
+
 
 
 ### Working with objects  
@@ -23,58 +22,7 @@
 	}
 	```
 
-### Working with arrays
 
-- Check the type of arrays to be "string"  
-	```
-	function check(dictionary){
-		return dictionary.every(item=>typeof item === "string");
-	}
-	```
-	
-- given a text separated with spaces, and a dictionary that contains strings. This snippet creates a new array if the current word from the text is also in the dictionary.
-	```
-	let arr = text.split(" ");
-	let result = [];
-	arr.forEach(item=>{
-		if(dictionary.includes(item) === true){
-			result.push(item);
-		}
-
-	});
-	return result.join(" ");
-	```  
-	[**Usage here**](https://gist.github.com/StefanLazea/72283ba8099f60b7c360f383a44798ad.js)
-	
-	
-- create a new array with unique elements
-	```
-	let firstArr = Array.from(new Set(first.filter(x => !second.includes(x))));
-	```
-	[**Usage here**](https://gist.github.com/StefanLazea/3a7e8a194cff02d1d6b8726ca11e7f29.js)
-	
-	
-- replace certain words as the token '...' with the value from element  
-	```
-	if (!input.includes('...')) {
-		return input;
-	} else {
-		tokens.forEach(element => {
-		    input = input.replace('...', "${" + `${element.tokenName}` + "}");
-
-		});
-		return input;
-	}
-	```  
-	[**Usage here**](https://github.com/StefanLazea/webtech-assignment2/blob/master/main/app.js)  
-	
-- find in array with SOME
-	```
-	if(app.locals.products.some(el=>
-		el.name === product.name && el.category === product.category && el.price === product.price)){
-		return res.status(500).send({message: "Product already exists"});
-	}
-	```  
 	
 ### REST
 
@@ -113,7 +61,6 @@
 
 
 
-# [body validation in post method](https://github.com/StefanLazea/webtech-assignment3/blob/master/main/app.js)
 ```
 	if (Object.keys(req.body).length === 0) {
         return res.status(400).send({ "message": "body is missing" });
@@ -164,7 +111,6 @@ if (!isNaN(pageNo) && !isNaN(pageSize)) {
 	}
 ```  
 
-[Similar content regarding state & add component](https://gist.github.com/StefanLazea/cf391e809c8066eee804ff2754a8952b.js)
 
 
 - onClick the button saves as props an object that is required for add   
@@ -181,9 +127,7 @@ if (!isNaN(pageNo) && !isNaN(pageSize)) {
 		}}
 ></button>
 ``` 
-# [React app, din cursuri](https://github.com/StefanLazea/ex-tech/tree/master/c10/simpleapp/src)  
-# Simple save robot, from an component  
-[RobotList](https://github.com/StefanLazea/wb-homework-4/blob/master/main/src/components/RobotForm.js)  
+# REACT
 
 - save the props: ```    let { item } = this.props; ```
 - handleChange - in order to set the state of an input given a certain event:
@@ -237,7 +181,6 @@ if (!isNaN(pageNo) && !isNaN(pageSize)) {
 	       ```
 
 
-[**Complete example here**](https://gist.github.com/StefanLazea/cb2fbd682e93bfb03df6d0709d9a4aa6.js)
 
 ```
 return (
@@ -260,7 +203,6 @@ return (
 	)
 ```
 
-[**RobotDetails**](https://github.com/StefanLazea/ex-tech/blob/master/v6/subj-3/var-3/main/src/components/RobotDetails.js)  
 ```
 class RobotDetails extends Component {
     render() {
@@ -275,9 +217,7 @@ class RobotDetails extends Component {
     }
 }
 ``` 
-[Robot](https://github.com/StefanLazea/ex-tech/blob/master/v6/subj-3/var-3/main/src/components/Robot.js)  
 
-## [Edit robot](https://github.com/StefanLazea/ex-tech/blob/master/v4/subj-3/var-2/main/src/components/Robot.js)
 ```
 if (!this.state.isEditing) {
 	return (
@@ -300,4 +240,3 @@ if (!this.state.isEditing) {
 	</div>
 }
 ```
-# web-tech-prep
